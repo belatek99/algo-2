@@ -1,0 +1,30 @@
+FUNCTION orthigonal(v1,v2:ARRAY_OF INTEGER[50],sum:INTEGER):INTEGER
+VAR
+    sum:INTEGER:=0
+    i:INTEGER
+BEGIN
+if(v1.lenght<>v2.lenght)then
+write("the two vectors have diffrent lenght")
+return sun:=NaN
+end if 
+    FOR i FROM 0 TO v1.lenght STEP 1  DO
+         sum:=sum+(v1[i]*v2[i])
+     END_FOR
+    END_FOR
+
+return sum
+END
+
+
+program checkpoint
+VAR
+v1,v2:ARRAY_OF INTEGER[50]
+sum:INTEGER
+BEGIN
+sum:=orthigonal
+if (sum=0)then
+write("The two vectors are orthogonal")
+else
+write("The two vectors are not orthogonal")
+end_if
+END.
